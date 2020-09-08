@@ -54,13 +54,27 @@ function addStudent() {
         Email: document.getElementById("email").value
     }
 
-    document.getElementById("addDiv").innerHTML = "";
+    var duplication = false;
 
-    SVs.push(sv);
+    for (var i = 0; i < SVs.length; i++) {
+        if (SVs[i].MSSV == sv.MSSV) {
+            duplication = true;
+            break;
+        }
+    }
 
-    SVs.sort(compare);
+    if (duplication) {
+        alert("MSSV is duplication! Please check again!");
+    }
+    else {
+        document.getElementById("addDiv").innerHTML = "";
 
-    showSVs();
+        SVs.push(sv);
+
+        SVs.sort(compare);
+
+        showSVs();
+    }
 }
 
 function deleteStudent(mssv) {
