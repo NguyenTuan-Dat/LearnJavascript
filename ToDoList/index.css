@@ -1,0 +1,33 @@
+.item{
+    border: solid;
+    border-color: red;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+div{
+    width: 800px;
+    margin: auto;
+}
+
+.string{
+    display: initial;
+    margin: 20px;
+}
+
+.delete{
+    display: initial;
+    left: 750px;
+    position: absolute;
+}
+
+#title{
+    width: 700px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#add{
+    width: 96px;
+    padding: 0px;
+}
